@@ -24,6 +24,9 @@ while x <= len(b)-1:
 print(f'{a} -> {sum}')
 # 2 вариант "Числа"
 # def Chisla(x):
+#     m = x
+#     if x<0:
+#         x *=(-1)
 #     a = x//1
 #     b = round((x-a), 5)
 #     U = 0.0
@@ -43,6 +46,6 @@ print(f'{a} -> {sum}')
 #             b *= 10
 #             I = I + (b//1)
 #             b = round(b - (b//1), 5)
-#     print(f'{x} -> {int(U+I)}')
+#     print(f'{m} -> {int(U+I)}')
 # your_number = float(input('Укажите Ваше любое вещественное число, хотя любое можете указать = '))
 # Chisla(your_number)
