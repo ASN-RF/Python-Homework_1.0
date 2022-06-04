@@ -6,11 +6,11 @@ def Opisanie (x):
     skobka='  ('
     for i in range(x):
         if i<1:
-            print(skobka, end='' , flush=True)
+            print(skobka, end='')
         for j in range(1, i+2):
-            print(j, end='' , flush=True)
+            print(j, end='')
         if i<x-1:
-            print(z, end=' ' , flush=True)
+            print(z, end=' ')
         if i==x-1:
             print(')')
 def Proizvedenie(a):
@@ -21,7 +21,7 @@ def Proizvedenie(a):
         sum *= count
         Array.append(sum)
         count += 1
-    print(Array, end="", flush=True)    
+    print(Array, end="")    
 N = int(input('Укажите Ваше любое целое положительное число = '))
 if N<0:
     N *=(-1)
