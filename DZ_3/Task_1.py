@@ -3,7 +3,7 @@
 #                                        Пример:
 #                                        [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 ArrayPrimer = [2, 3, 5, 9, 3]
-def SummmaNechetnix(a):
+def SummmaNechetnix_Var1(a):
     print(f'{a} -> на нечётных позициях элементы ', end='')
     count = 0
     summa = 0
@@ -21,16 +21,32 @@ def SummmaNechetnix(a):
                 shetI += 1
     print(f', ответ: {summa}')
     print('Большое СПАСИБО, что потратили своё время на проверку моего решения!')
+def  SummmaNechetnix_Var2(a, summa: int = 0):
+    print(f'{a} -> на нечётных позициях элементы ', end='')
+    shetI = 1
+    for i in range(1, len(a), 2):
+        if shetI < int(len(a)/2):
+            print (f'{a[i]} и ', end='')
+            summa += a[i]
+            shetI += 1    
+        else:
+            print (f'{a[i]}, ответ: ', end='')
+            summa += a[i]
+            shetI += 1
+    print (summa)
+    print('Большое СПАСИБО, что потратили своё время на проверку моего решения!')
+    return summa
 print('Здравствуйте! Для повышения удобства проверки задания, можете выбрать один из предложеных вариантов:')
-print('1 вариант - Проверить решение задания на основании указанного списка в примере\n2 вариант - Проверить решение задания введя список чисел самостоятельно\nВведите цифру варианта и нажминте -Enter-\nИ так Ваш выбор?')
+print('1 вариант - Проверить решение задания на основании указанного списка в примере\n2 вариант - Проверить решение задания введя список чисел самостоятельно\nВведите цифру варианта и нажмите -Enter-\nИ так Ваш выбор?')
 x = int(input('Вариант: '))
 if x == 1:
-    SummmaNechetnix(ArrayPrimer)
+    SummmaNechetnix_Var1(ArrayPrimer) # 1 способ
+    # SummmaNechetnix_Var2(ArrayPrimer)   # 2 способ
 if x == 2:
     ArrayVvod = input(
         'Введите Ваши данные элементов списка, через пробел\n').split(' ')
-    print(ArrayVvod)
     ArrayVvod = list(map(int, ArrayVvod))
-    SummmaNechetnix(ArrayVvod)
+    SummmaNechetnix_Var1(ArrayVvod) # 1 способ
+    # SummmaNechetnix_Var2(ArrayVvod) # 2 способ
 if x < 1 or x > 2:
     print('К большому сожалению данной программой предусмотренного всего два варианта. Попробуйте снова!')
